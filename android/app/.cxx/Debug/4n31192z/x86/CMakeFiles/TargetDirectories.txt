@@ -1,0 +1,2 @@
+C:/Users/i2PieO/Desktop/amazon/android/app/.cxx/Debug/4n31192z/x86/CMakeFiles/edit_cache.dir
+C:/Users/i2PieO/Desktop/amazon/android/app/.cxx/Debug/4n31192z/x86/CMakeFiles/rebuild_cache.dir
