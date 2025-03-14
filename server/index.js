@@ -1,16 +1,28 @@
 // IMPORTS FROM PACKAGES
 const express = require("express");
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 // IMPORTS FROM OTHER FILES =
 const authRouter = require("./routes/auth");
 
-// INIT 
+// INIT
 const PORT = 3000;
 const app = express();
+const DB = "mongodb+srv://jawad:jawad@cluster0.qlhih.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 // middleware
+app.use(express.json());  
 app.use(authRouter);
 
+// Connections
+mongoose
+  .connect(DB)
+  .then(() => {
+    console.log("Connection Successful");
+  })
+  .catch((e) => {
+    console.log(e);
+  });
+
 app.listen(PORT, () => {
-    console.log(`connected at port ${PORT}`);
+  console.log(`connected at port ${PORT}`);
 });
